@@ -17,7 +17,7 @@ public class PersonController {
     private IPersonService service;
 
     @GetMapping()
-    public List<PersonResponse> getAllPersons(@PathVariable("name") String name){
+    public List<PersonResponse> getAllPersons(){
         return this.service.getAll().stream().map(PersonResponse::new).collect(Collectors.toList());
     }
 }

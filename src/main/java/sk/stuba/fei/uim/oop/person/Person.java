@@ -16,7 +16,7 @@ public class Person {
 
     private String name;
 
-    @OneToOne
+    @ManyToOne
     private Animal animal;
 
     public Person(String name) {
