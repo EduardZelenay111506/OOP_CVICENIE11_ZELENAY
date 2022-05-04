@@ -2,11 +2,9 @@ package sk.stuba.fei.uim.oop.person;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import sk.stuba.fei.uim.oop.animal.Animal;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -17,6 +15,9 @@ public class Person {
     private Long id;
 
     private String name;
+
+    @OneToOne
+    private Animal animal;
 
     public Person(String name) {
         this.name = name;
